@@ -67,6 +67,20 @@ class binarySearchTree {
         }
         return data
     }
+    depthFirstSearchPreOrder(){
+        var data = [];
+        var current = this.root;
+        function traverse(node){
+            data.push(node);
+            if(node.left) traverse(node.left);
+            if(node.right) traverse(node.right);
+        }
+        traverse(current);
+        return data;
+
+    }
+
+
 }
 
 var tree = new binarySearchTree();
