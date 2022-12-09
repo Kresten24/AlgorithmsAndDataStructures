@@ -107,9 +107,10 @@ class DoublyLinkedList {
         if (idx < 0 || idx > this.length) {
             return false
         } else if (idx === this.length) {
-            !!this.push(val)
+            //returns boolean ( !! will convert the object to boolean)
+            return !!this.push(val)
         } else if (idx === 0) {
-            !!this.unshift(val)
+            return !!this.unshift(val)
         } else {
             var previousNodeAtIdx = this.get(idx - 1)
             var nodeAtIdx = previousNodeAtIdx.next
